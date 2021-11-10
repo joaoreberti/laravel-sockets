@@ -33,4 +33,13 @@ class Task implements ShouldBroadcast
     {
         return new Channel('task');
     }
+    /**
+     * Get the channels the event should broadcast on.
+     *
+     * @return \Illuminate\Broadcasting\Channel|array
+     */
+    public function broadcastAs()
+    {
+        return "bananas";
+    }
 }
