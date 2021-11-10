@@ -29,8 +29,10 @@ return [
             'secret' => env('PUSHER_APP_SECRET'),
             'path' => env('PUSHER_APP_PATH'),
             'capacity' => null,
+            //TODO retirar
             'enable_client_messages' => true,
             'enable_statistics' => true,
+            'host' => env('WEBSOCKETS_URL'), // for dashboard
         ],
     ],
 
@@ -48,7 +50,8 @@ return [
      * Leave this empty if you want to accept requests from all hosts.
      */
     'allowed_origins' => [
-        //
+       // parse_url(env('APP_URL'))['host']
+
     ],
 
     /*
